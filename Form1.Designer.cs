@@ -32,6 +32,7 @@
             label1 = new Label();
             EchoWindow = new ListBox();
             textBox1 = new TextBox();
+            label2 = new Label();
             Button1 = new Button();
             SuspendLayout();
             // 
@@ -83,6 +84,17 @@
             textBox1.TabIndex = 2;
             textBox1.Text = "이곳에 입력하세요...";
             textBox1.TextChanged += textBox1_TextChanged;
+            textBox1.KeyDown += textBox1_KeyDown_1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(595, 64);
+            label2.Name = "label2";
+            label2.Size = new Size(104, 20);
+            label2.TabIndex = 4;
+            label2.Text = "메시지 카운팅";
+            label2.Click += label2_Click;
             // 
             // Form1
             // 
@@ -90,6 +102,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Desktop;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
             Controls.Add(Button1);
             Controls.Add(textBox1);
             Controls.Add(EchoWindow);
@@ -106,5 +119,6 @@
         private ListBox EchoWindow;
         private TextBox textBox1;
         private Button Button1;
+        private Label label2;
     }
 }
