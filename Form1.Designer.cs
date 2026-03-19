@@ -28,12 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            Button Button1;
+            label1 = new Label();
+            EchoWindow = new ListBox();
+            textBox1 = new TextBox();
+            Button1 = new Button();
+            SuspendLayout();
+            // 
+            // Button1
+            // 
+            Button1.BackColor = SystemColors.GradientInactiveCaption;
+            Button1.Font = new Font("휴먼엑스포", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            Button1.ForeColor = Color.SteelBlue;
+            Button1.Location = new Point(610, 372);
+            Button1.Name = "Button1";
+            Button1.Size = new Size(105, 40);
+            Button1.TabIndex = 3;
+            Button1.Text = "전송";
+            Button1.UseVisualStyleBackColor = false;
+            Button1.Click += button1_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("휴먼편지체", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label1.ForeColor = SystemColors.MenuHighlight;
+            label1.Location = new Point(31, 33);
+            label1.Name = "label1";
+            label1.Size = new Size(416, 51);
+            label1.TabIndex = 0;
+            label1.Text = "˚₊‧ Echo Messenger";
+            label1.Click += label1_Click;
+            // 
+            // EchoWindow
+            // 
+            EchoWindow.BackColor = SystemColors.Window;
+            EchoWindow.BorderStyle = BorderStyle.FixedSingle;
+            EchoWindow.Font = new Font("함초롬돋움", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            EchoWindow.FormattingEnabled = true;
+            EchoWindow.Location = new Point(56, 100);
+            EchoWindow.Name = "EchoWindow";
+            EchoWindow.Size = new Size(659, 242);
+            EchoWindow.TabIndex = 1;
+            EchoWindow.SelectedIndexChanged += EchoWindow_SelectedIndexChanged;
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("함초롬돋움", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            textBox1.ForeColor = SystemColors.ScrollBar;
+            textBox1.Location = new Point(56, 372);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(539, 40);
+            textBox1.TabIndex = 2;
+            textBox1.Text = "이곳에 입력하세요...";
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Desktop;
             ClientSize = new Size(800, 450);
+            Controls.Add(Button1);
+            Controls.Add(textBox1);
+            Controls.Add(EchoWindow);
+            Controls.Add(label1);
+            Name = "Form1";
             Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
+        private ListBox EchoWindow;
+        private TextBox textBox1;
+        private Button Button1;
     }
 }
